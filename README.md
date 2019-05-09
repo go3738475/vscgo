@@ -1,0 +1,2 @@
+# vscgo
+vscode for go
