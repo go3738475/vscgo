@@ -1,0 +1,15 @@
+*.tar
+/home/*
+!/home/bin
+!/home/.inputrc
+!/home/.gitconfig
+!/home/.selected_editor
+!/home/.profile
+
+!/home/.config
+/home/.config/*
+!/home/.config/Code
+/home/.config/Code/*
+!/home/.config/Code/User
+/home/.config/Code/User/*
+!/home/.config/Code/User/settings.json

@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=/home/dev/projects/containers/vscode/vscgo.sh
+GenericName[en_US]=vscode for GO
+GenericName=vscode for GO
+Icon=/home/dev/projects/containers/vscode/code.png
+MimeType=
+Name[en_US]=vscode
+Name=vscode
+Path=/home/dev/projects/containers/vscode
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=none
+X-KDE-SubstituteUID=false
+X-KDE-Username=

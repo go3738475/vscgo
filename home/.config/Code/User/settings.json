@@ -1,0 +1,14 @@
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "terminal.integrated.shell.linux": "bash",
+    "editor.minimap.enabled": false,
+    "files.autoSave": "onFocusChange",
+    "editor.rulers": [
+        120
+    ],
+    "workbench.colorTheme": "Darcula Theme from IntelliJ",
+    "editor.formatOnSave": true,
+    "explorer.confirmDelete": false,
+    "terminal.integrated.fontSize": 15
+}
