@@ -5,7 +5,7 @@
 !/home/.gitconfig
 !/home/.selected_editor
 !/home/.profile
-
+!/home/.bashrc
 !/home/.config
 /home/.config/*
 !/home/.config/Code
