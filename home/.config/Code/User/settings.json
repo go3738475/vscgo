@@ -10,5 +10,12 @@
     "workbench.colorTheme": "Darcula Theme from IntelliJ",
     "editor.formatOnSave": true,
     "explorer.confirmDelete": false,
-    "terminal.integrated.fontSize": 15
+    "terminal.integrated.fontSize": 15,
+    "go.buildOnSave": "off",
+    "cSpell.userWords": [
+        "gobuffalo"
+    ],
+    "go.testFlags": [
+        "-v"
+    ]
 }

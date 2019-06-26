@@ -72,6 +72,7 @@ rm go1.12.2.linux-amd64.tar.gz;
 COPY start.sh /usr/local/bin/start.sh
 
 EXPOSE 3000 80 8000
+EXPOSE 8100-8200
 
 WORKDIR $HOME
 

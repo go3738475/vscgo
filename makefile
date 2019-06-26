@@ -4,6 +4,9 @@ help: #prints list of commands
 build: #build vscgo
 	@docker build -t vscgo .
 
+rebuild: #rebuild vsgo
+	@docker build --no-cache -t vscgo .
+
 start: #start vscgo
 	@./vscgo.sh
 
