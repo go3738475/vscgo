@@ -8,6 +8,7 @@ xhost local:root;
 
 docker run -d \
 --rm \
+--security-opt=seccomp:unconfined \
 --user $(id -u):$(id -g) \
 -p 80:3000 \
 -p 8000:8000 \
