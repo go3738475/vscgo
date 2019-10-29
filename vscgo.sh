@@ -14,6 +14,7 @@ docker run -d \
 -p 8000:8000 \
 -v /home/dev/projects/go/auth:/tmp/go \
 -v $(pwd)/home:/home/user \
+-v $(pwd)/start.sh:/usr/local/bin/start.sh \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
 -e DISPLAY=unix$DISPLAY \
 --device /dev/dri \
