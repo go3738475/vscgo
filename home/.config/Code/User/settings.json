@@ -13,10 +13,13 @@
     "terminal.integrated.fontSize": 15,
     "go.buildOnSave": "off",
     "cSpell.userWords": [
-        "gobuffalo"
+        "gobuffalo",
+        "uuid"
     ],
     "go.testFlags": [
         "-v"
     ],
-    "go.useLanguageServer": true
+    "go.useLanguageServer": true,
+    "todo-tree.tree.showScanModeButton": false,
+    "diffEditor.ignoreTrimWhitespace": false
 }

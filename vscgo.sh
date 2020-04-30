@@ -19,4 +19,5 @@ docker run -d \
 -e DISPLAY=unix$DISPLAY \
 --device /dev/dri \
 --name vscgo \
+--ipc=host \
 vscgo;
