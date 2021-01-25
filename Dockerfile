@@ -49,6 +49,7 @@ RUN apt-get update && apt-get -y install \
     libxrender1 \
     libxss1 \
     libxtst6 \
+    libxcb-dri3-0 \
     openssh-client \
     wget \
     build-essential \
@@ -64,10 +65,9 @@ ENV HOME /home/user
 RUN useradd --create-home --home-dir $HOME user \
     && chown -R user:user $HOME
 
-RUN wget https://dl.google.com/go/go1.12.2.linux-amd64.tar.gz; \
-tar -xvf go1.12.2.linux-amd64.tar.gz; \
-mv go /usr/local; \
-rm go1.12.2.linux-amd64.tar.gz;
+RUN wget https://golang.org/dl/go1.15.7.linux-amd64.tar.gz; \
+tar -C /usr/local -xzf go1.15.7.linux-amd64.tar.gz; \
+rm go1.15.7.linux-amd64.tar.gz;
 
 COPY start.sh /usr/local/bin/start.sh
 

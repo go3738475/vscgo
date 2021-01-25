@@ -13,13 +13,26 @@
     "terminal.integrated.fontSize": 15,
     "go.buildOnSave": "off",
     "cSpell.userWords": [
+        "bcrypt",
+        "bson",
+        "dgrijalva",
+        "eqfield",
         "gobuffalo",
-        "uuid"
+        "gofrs",
+        "gonic",
+        "infof",
+        "netrans",
+        "stretchr",
+        "uuid",
+        "vrules",
+        "warnf"
     ],
     "go.testFlags": [
         "-v"
     ],
     "go.useLanguageServer": true,
     "todo-tree.tree.showScanModeButton": false,
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "tabnine.experimentalAutoImports": true,
+    "window.zoomLevel": 0
 }

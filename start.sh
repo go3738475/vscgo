@@ -11,9 +11,12 @@ export GOFLAGS=-mod=vendor;
 
 export PATH=/home/user/bin:$GOPATH/bin:$GOROOT/bin:$PATH;
 
+#tail -f /etc/hosts
+
 if [ $(id -u) -eq 1000 ]
 then
 /usr/share/code/code
 else
 su user -p -c /usr/share/code/code
 fi
+
