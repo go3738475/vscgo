@@ -28,11 +28,13 @@
         "warnf"
     ],
     "go.testFlags": [
-        "-v"
+        "-v",
+        "-count=1"
     ],
     "go.useLanguageServer": true,
     "todo-tree.tree.showScanModeButton": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "tabnine.experimentalAutoImports": true,
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "editor.multiCursorModifier": "ctrlCmd"
 }
