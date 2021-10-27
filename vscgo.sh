@@ -20,6 +20,7 @@ docker run -d \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
 -e DISPLAY=unix$DISPLAY \
 --device /dev/dri \
+--device /dev/snd \
 --name vscgo \
 --ipc=host \
 vscgo;

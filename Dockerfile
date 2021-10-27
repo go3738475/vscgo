@@ -1,25 +1,16 @@
-# Visual Studio Code in a container
-#	NOTE: Needs the redering device (yeah... idk)
-#
-# docker run -d \
-#    -v /tmp/.X11-unix:/tmp/.X11-unix \
-#    -v $HOME:/home/user \
-#    -e DISPLAY=unix$DISPLAY \
-#    --device /dev/dri \
-#    --name vscode \
-#    jess/vscode
-
 FROM debian:buster-slim
-LABEL maintainer "Jessie Frazelle <jess@linux.com>"
 
 # Tell debconf to run in non-interactive mode
 ENV DEBIAN_FRONTEND noninteractive
+
 
 RUN apt-get update && apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
     gnupg \
+    graphviz \
+    gv \
     --no-install-recommends
 
 # Add the vscode debian repo
@@ -29,7 +20,9 @@ RUN echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable ma
 RUN apt-get update && apt-get -y install \
     code \
     git \
+    protobuf-compiler \
     libasound2 \
+    libxshmfence-dev \
     libatk1.0-0 \
     libcairo2 \
     libcups2 \
@@ -65,9 +58,9 @@ ENV HOME /home/user
 RUN useradd --create-home --home-dir $HOME user \
     && chown -R user:user $HOME
 
-RUN wget https://golang.org/dl/go1.15.7.linux-amd64.tar.gz; \
-tar -C /usr/local -xzf go1.15.7.linux-amd64.tar.gz; \
-rm go1.15.7.linux-amd64.tar.gz;
+RUN wget https://golang.org/dl/go1.17.2.linux-amd64.tar.gz; \
+tar -C /usr/local -xzf go1.17.2.linux-amd64.tar.gz; \
+rm go1.17.2.linux-amd64.tar.gz;
 
 COPY start.sh /usr/local/bin/start.sh
 
