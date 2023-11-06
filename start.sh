@@ -15,8 +15,8 @@ export PATH=/home/user/bin:$GOPATH/bin:$GOROOT/bin:$PATH;
 
 if [ $(id -u) -eq 1000 ]
 then
-/usr/share/code/code
+/usr/share/code/code --disable-gpu
 else
-su user -p -c /usr/share/code/code
+su user -p -c /usr/share/code/code --disable-gpu
 fi
 
