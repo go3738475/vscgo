@@ -1,5 +1,74 @@
 {
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        120
+    ],
     "workbench.colorTheme": "Darcula Theme from IntelliJ",
-    "terminal.integrated.defaultProfile.linux": "bash",
-    "files.autoSave": "onFocusChange"
+    "explorer.confirmDelete": false,
+    "terminal.integrated.fontSize": 15,
+    "cSpell.userWords": [
+        "bcrypt",
+        "bson",
+        "dgrijalva",
+        "eqfield",
+        "gobuffalo",
+        "gofrs",
+        "gonic",
+        "infof",
+        "netrans",
+        "stretchr",
+        "uuid",
+        "vrules",
+        "warnf"
+    ],
+    "todo-tree.tree.showScanModeButton": false,
+    "tabnine.experimentalAutoImports": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "kite.showWelcomeNotificationOnStartup": false,
+    "terminal.integrated.defaultProfile.linux": "bash (migrated)",
+
+    "go.testFlags": [
+        "-v",
+        "-count=1"
+    ],
+    "go.buildOnSave": "off",
+    "go.useLanguageServer": true,
+    "go.coverOnTestPackage":false,
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "go.toolsEnvVars": {
+        "GO111MODULE": "on",
+    },
+    "go.formatTool": "goimports",
+    "redhat.telemetry.enabled": false,
+    "terminal.integrated.profiles.linux": {
+        "bash (migrated)": {
+            "path": "bash",
+            "args": []
+        }
+    },
+    "files.watcherExclude": {
+        "**/vendor/**": true
+    },
+    "terminal.integrated.gpuAcceleration": "off",
+    "files.autoSave": "onFocusChange",
+    "telemetry.telemetryLevel": "off",
+    "continue.telemetryEnabled": false,
+    "gitlens.telemetry.enabled": false,
 }

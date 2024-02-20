@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM ubuntu:22.04
 
 # Tell debconf to run in non-interactive mode
 ENV DEBIAN_FRONTEND noninteractive
@@ -8,12 +8,10 @@ RUN apt-get update && apt-get install -y \
     apt-transport-https \
     ca-certificates \
     pkg-config \
-    libasound2-dev \
     curl \
-    ffmpeg \
+    wget \
+    git \
     gnupg \
-    graphviz \
-    gv \
     --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
@@ -23,49 +21,24 @@ RUN echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable ma
 
 RUN apt-get update && apt-get -y install \
     code \
-    git \
     protobuf-compiler \
-    libasound2 \
-    libxshmfence-dev \
-    libatk1.0-0 \
-    libcairo2 \
-    libcups2 \
-    libexpat1 \
-    libfontconfig1 \
-    libfreetype6 \
-    libgtk2.0-0 \
-    libpango-1.0-0 \
-    libx11-xcb1 \
-    libxcomposite1 \
-    libxcursor1 \
-    libxdamage1 \
-    libxext6 \
-    libxfixes3 \
-    libxi6 \
-    libxrandr2 \
-    libxrender1 \
-    libxss1 \
-    libxtst6 \
-    libxcb-dri3-0 \
     openssh-client \
-    wget \
     build-essential \
     tree \
-    --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 ENV HOME /home/user
 RUN useradd --create-home --home-dir $HOME user \
     && chown -R user:user $HOME
 
-RUN wget https://golang.org/dl/go1.21.1.linux-amd64.tar.gz; \
-tar -C /usr/local -xzf go1.21.1.linux-amd64.tar.gz; \
-rm go1.21.1.linux-amd64.tar.gz;
+ENV GOVER 1.22.0
+RUN wget https://golang.org/dl/go${GOVER}.linux-amd64.tar.gz; \
+tar -C /usr/local -xzf go${GOVER}.linux-amd64.tar.gz; \
+rm go${GOVER}.linux-amd64.tar.gz;
 
 COPY start.sh /usr/local/bin/start.sh
 
-EXPOSE 3000 80 8000
-EXPOSE 8100-8200
+EXPOSE 3000
 
 WORKDIR $HOME
 

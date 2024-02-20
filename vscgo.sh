@@ -1,10 +1,14 @@
 #!/bin/sh
 
-docker stop vscgo;
-docker rm vscgo;
+#docker stop vscgo;
+#docker rm vscgo;
 xhost local:root;
 
 #--user $(id -u):$(id -g) \
+# USB
+# --privileged
+# -v /dev/bus/usb:/dev/bus/usb
+# --security-opt=seccomp:unconfined \
 
 # USB
 # --privileged
@@ -16,7 +20,6 @@ docker run -d \
 --security-opt=seccomp:unconfined \
 --user $(id -u):$(id -g) \
 -p 80:3000 \
--p 8000:8000 \
 -v /home/dev/projects/go/src:/tmp/go/src/github.com/go3738475 \
 -v /home/dev/projects/go/bin:/tmp/go/bin \
 -v /home/dev/projects/go/pkg:/tmp/go/pkg \
