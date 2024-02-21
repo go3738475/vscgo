@@ -24,7 +24,6 @@
         "warnf"
     ],
     "todo-tree.tree.showScanModeButton": false,
-    "tabnine.experimentalAutoImports": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "todo-tree.general.tags": [
         "BUG",
@@ -37,8 +36,7 @@
     ],
     "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
     "kite.showWelcomeNotificationOnStartup": false,
-    "terminal.integrated.defaultProfile.linux": "bash (migrated)",
-
+    "terminal.integrated.defaultProfile.linux": "bash",
     "go.testFlags": [
         "-v",
         "-count=1"
@@ -57,12 +55,6 @@
     },
     "go.formatTool": "goimports",
     "redhat.telemetry.enabled": false,
-    "terminal.integrated.profiles.linux": {
-        "bash (migrated)": {
-            "path": "bash",
-            "args": []
-        }
-    },
     "files.watcherExclude": {
         "**/vendor/**": true
     },
